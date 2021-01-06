@@ -8,14 +8,18 @@ class Cvcloud < Formula
 
   if OS.mac?
     url "https://github.com/tenzen-y/cvcloud/releases/download/v1.0.0/cvcloud_1.0.0_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "d66c59d52d2d153c2fc547030d1cd56abe6754bd1d039bff00ab25c0f5d93bcf"
+    sha256 "1ab2158ced8a09973e77f012eb9999ad1baee0e03d7b32e97fbfc373293e8aef"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/tenzen-y/cvcloud/releases/download/v1.0.0/cvcloud_1.0.0_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "02c0fee19b7ca75a5e598b7d0bdef769d2688b804560df1d0634c092d8ea0d1b"
+    sha256 "90fcd3c290d035e8860a447eb2e1e5715e966b2e3e5a23cce927a384683d6f6f"
   end
 
   def install
     bin.install "cvcloud"
+  end
+
+  test do
+    system "#{bin}/cvcloud version"
   end
 end
