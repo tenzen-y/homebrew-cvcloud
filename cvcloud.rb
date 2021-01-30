@@ -6,16 +6,16 @@ require_relative "./lib/download_strategy.rb"
 class Cvcloud < Formula
   desc "client tool to use cvcloud"
   homepage "https://gitlab.com/kindaicvlab/cvcloud/cvcloud"
-  version "1.2.1"
+  version "1.2.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/tenzen-y/cvcloud/releases/download/v1.2.1/cvcloud_1.2.1_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "919334f3017c744e73b78a56e57b22974cfe3abadd63fccfa58811ada57fc9f7"
+    url "https://github.com/tenzen-y/cvcloud/releases/download/v1.2.2/cvcloud_1.2.2_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "c5e50f5e23a90144ac3ccbcae2bf007d0678d4ad4445ef1a148f4b42c8b17a0b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/tenzen-y/cvcloud/releases/download/v1.2.1/cvcloud_1.2.1_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "354d6e8f929595a7834e411e7476f8d6042b0a5bc2a0b3ca013fcc2c1f6d0843"
+    url "https://github.com/tenzen-y/cvcloud/releases/download/v1.2.2/cvcloud_1.2.2_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "7797d70c25cb8c7df276dad8370b2d02b1b1c58dc7b5232f61742d61791a5139"
   end
 
   def install
